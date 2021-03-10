@@ -4,6 +4,7 @@ This section walks you through the process. For reference, you can have a look
 at the documentation available for [Swisscom Trust Services (AIS included)](https://trustservices.swisscom.com/en/downloads/) and, more specifically, to the
 [Reference Guide for AIS](http://documents.swisscom.com/product/1000255-Digital_Signing_Service/Documents/Reference_Guide/Reference_Guide-All-in-Signing-Service-en.pdf).
 
+Using the following link you can request for a free All-in Signing Service test account valid for 90 days: http://documents.swisscom.com/product/filestore/lib/920aa2d3-d413-4776-8630-5ee9b06587b7/OrderTestaccount-en.pdf 
 The authentication between an AIS client and the AIS service relies on TLS client authentication. Therefore, you need a certificate
 that is enrolled on the Swisscom AIS side. For these steps, a local installation of [OpenSSL](https://www.openssl.org/) is needed
 (for Windows, the best option is to use the one that comes with GIT for Windows (see _<git>/usr/bin/openssl.exe_)).
