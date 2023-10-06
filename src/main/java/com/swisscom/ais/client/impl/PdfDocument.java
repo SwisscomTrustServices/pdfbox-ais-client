@@ -394,11 +394,11 @@ public class PdfDocument implements Closeable {
 
                 // show text
                 float fontSize = 8;
-                float leading = fontSize * 0.3f;
+                float leading = fontSize * 1.5f;
                 cs.beginText();
                 cs.setFont(font, fontSize);
                 cs.setNonStrokingColor(Color.black);
-                cs.newLineAtOffset(fontSize, height - leading);
+                cs.newLineAtOffset(0, height - leading);
                 cs.setLeading(leading);
 
                 Calendar cal = signature.getSignDate();
