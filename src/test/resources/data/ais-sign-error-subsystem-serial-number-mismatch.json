@@ -1,0 +1,10 @@
+{
+  "SignResponse": {
+    "@RequestID": "test-request-id-1",
+    "@Profile": "http://ais.swisscom.ch/1.1",
+    "Result": {
+      "ResultMajor": "http://ais.swisscom.ch/1.0/resultmajor/SubsystemError",
+      "ResultMinor": "http://ais.swisscom.ch/1.1/resultminor/subsystem/StepUp/SerialNumberMismatch"
+    }
+  }
+}

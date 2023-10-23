@@ -1,0 +1,10 @@
+{
+  "SignatureObject": [
+    "dGVzdC1zaWduYXR1cmUtY29udGVudHMtMQ==",
+    "dGVzdC1zaWduYXR1cmUtY29udGVudHMtMg=="
+  ],
+  "validationInfo": {
+    "crl": [],
+    "ocsp": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "SignResponse": {
+    "@RequestID": "test-request-id-1",
+    "@Profile": "http://ais.swisscom.ch/1.1",
+    "Result": {
+      "ResultMajor": "http://ais.swisscom.ch/1.0/resultmajor/SubsystemError",
+      "ResultMinor": "http://ais.swisscom.ch/1.0/resultminor/InsufficientData",
+      "ResultMessage": {
+        "@xml.lang": "en",
+        "$": "<MSISDN> is missing"
+      }
+    }
+  }
+}

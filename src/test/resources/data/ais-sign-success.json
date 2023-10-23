@@ -1,0 +1,52 @@
+{
+  "SignResponse": {
+    "@RequestID": "test-request-id-1",
+    "@Profile": "http://ais.swisscom.ch/1.1",
+    "Result": {
+      "ResultMajor": "urn:oasis:names:tc:dss:1.0:resultmajor:Success"
+    },
+    "OptionalOutputs": {
+      "async.ResponseID": "test-response-id-1",
+      "sc.APTransID": "test-ap-trans-id-1",
+      "sc.StepUpAuthorisationInfo": {
+        "sc.Result": {
+          "sc.SerialNumber": "test-social-number-1",
+          "sc.ConsentURL": "test-consent-url-1"
+        }
+      },
+      "sc.RevocationInformation": {
+        "sc.CRLs": {
+          "sc.CRL": []
+        },
+        "sc.OCSPs": {
+          "sc.OCSP": []
+        }
+      }
+    },
+    "SignatureObject": {
+      "Base64Signature": {
+        "$": "dGVzdC1zaWduYXR1cmUtJC0x",
+        "@Type": "dGVzdC1zaWduYXR1cmUtdHlwZS0x"
+      },
+      "Timestamp": {
+        "RFC3161TimeStampToken": "dGVzdC10aW1lc3RhbXAtdG9rZW4tMQ=="
+      },
+      "Other": {
+        "sc.SignatureObjects": {
+          "sc.ExtendedSignatureObject": [
+            {
+              "@WhichDocument": "DOC_ID#1",
+              "Base64Signature": {
+                "@Type": "dGVzdC1zaWduYXR1cmUtdHlwZS0y",
+                "$": "dGVzdC1zaWduYXR1cmUtJC0y"
+              },
+              "Timestamp": {
+                "RFC3161TimeStampToken": "dGVzdC10aW1lc3RhbXAtdG9rZW4tMg=="
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
