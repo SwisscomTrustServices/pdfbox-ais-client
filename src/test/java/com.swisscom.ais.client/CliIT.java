@@ -266,7 +266,6 @@ public class CliIT {
 
             @Test
             public void should_generate_sign_only_first_provided_document() {
-                System.out.println("test-signature-contents-2: " + Base64.getEncoder().encodeToString("test-signature-contents-2".getBytes()));
                 final Calendar expectedSignatureSignDate = getSignatureSignDatePlus3Minutes();
                 TestServer.runForEtsi(
                     TestServlet.Etsi.MultipleSuccess.class,
@@ -428,15 +427,13 @@ public class CliIT {
                 TestServer.runForDss(
                     TestServlet.Dss.SignErrorSubsystemStepUpTimeout.class,
                     (testServer) -> {
-                        final TestUtils.TestConsoleStream consoleStream = new TestUtils.TestConsoleStream();
-                        System.setOut(consoleStream);
                         sendCodeToConsole();
                         runCliMain(new String[] {
                             "-config", testConfigPath,
                             "-type", type,
                             "-input", testPdfFilePath
                         });
-                        assertEquals(consoleStream.getFinalResult(), "USER_TIMEOUT");
+                        assertEquals(testServer.consoleStream.getFinalResult(), "USER_TIMEOUT");
                     }
                 );
             }
@@ -447,15 +444,13 @@ public class CliIT {
                 TestServer.runForDss(
                     TestServlet.Dss.SignErrorSubsystemSerialNumberMismatch.class,
                     (testServer) -> {
-                        final TestUtils.TestConsoleStream consoleStream = new TestUtils.TestConsoleStream();
-                        System.setOut(consoleStream);
                         sendCodeToConsole();
                         runCliMain(new String[] {
                             "-config", testConfigPath,
                             "-type", type,
                             "-input", testPdfFilePath
                         });
-                        assertEquals(consoleStream.getFinalResult(), "SERIAL_NUMBER_MISMATCH");
+                        assertEquals(testServer.consoleStream.getFinalResult(), "SERIAL_NUMBER_MISMATCH");
                     }
                 );
             }
@@ -466,15 +461,13 @@ public class CliIT {
                 TestServer.runForDss(
                     TestServlet.Dss.SignErrorSubsystemStepUpCancel.class,
                     (testServer) -> {
-                        final TestUtils.TestConsoleStream consoleStream = new TestUtils.TestConsoleStream();
-                        System.setOut(consoleStream);
                         sendCodeToConsole();
                         runCliMain(new String[] {
                             "-config", testConfigPath,
                             "-type", type,
                             "-input", testPdfFilePath
                         });
-                        assertEquals(consoleStream.getFinalResult(), "USER_CANCEL");
+                        assertEquals(testServer.consoleStream.getFinalResult(), "USER_CANCEL");
                     }
                 );
             }
@@ -485,15 +478,13 @@ public class CliIT {
                 TestServer.runForDss(
                     TestServlet.Dss.SignErrorSubsystemInsufficientDataMissingMsisdn.class,
                     (testServer) -> {
-                        final TestUtils.TestConsoleStream consoleStream = new TestUtils.TestConsoleStream();
-                        System.setOut(consoleStream);
                         sendCodeToConsole();
                         runCliMain(new String[] {
                             "-config", testConfigPath,
                             "-type", type,
                             "-input", testPdfFilePath
                         });
-                        assertEquals(consoleStream.getFinalResult(), "INSUFFICIENT_DATA_WITH_ABSENT_MSISDN");
+                        assertEquals(testServer.consoleStream.getFinalResult(), "INSUFFICIENT_DATA_WITH_ABSENT_MSISDN");
                     }
                 );
             }
@@ -504,15 +495,13 @@ public class CliIT {
                 TestServer.runForDss(
                     TestServlet.Dss.SignErrorSubsystemServiceErrorInvalidPassword.class,
                     (testServer) -> {
-                        final TestUtils.TestConsoleStream consoleStream = new TestUtils.TestConsoleStream();
-                        System.setOut(consoleStream);
                         sendCodeToConsole();
                         runCliMain(new String[] {
                             "-config", testConfigPath,
                             "-type", type,
                             "-input", testPdfFilePath
                         });
-                        assertEquals(consoleStream.getFinalResult(), "USER_AUTHENTICATION_FAILED");
+                        assertEquals(testServer.consoleStream.getFinalResult(), "USER_AUTHENTICATION_FAILED");
                     }
                 );
             }
@@ -523,15 +512,13 @@ public class CliIT {
                 TestServer.runForDss(
                     TestServlet.Dss.SignErrorSubsystemServiceErrorInvalidOtp.class,
                     (testServer) -> {
-                        final TestUtils.TestConsoleStream consoleStream = new TestUtils.TestConsoleStream();
-                        System.setOut(consoleStream);
                         sendCodeToConsole();
                         runCliMain(new String[] {
                             "-config", testConfigPath,
                             "-type", type,
                             "-input", testPdfFilePath
                         });
-                        assertEquals(consoleStream.getFinalResult(), "USER_AUTHENTICATION_FAILED");
+                        assertEquals(testServer.consoleStream.getFinalResult(), "USER_AUTHENTICATION_FAILED");
                     }
                 );
             }
